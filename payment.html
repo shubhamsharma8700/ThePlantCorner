@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"3
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <a href="index.html"><span class="h2 text-dark mx-3 my-5"><i class="bi bi-arrow-left"></i></span></a>
+  
+
+    <div class="container rounded ">
+        <h3 align=center class="my-5">ADDRESS</h3> 
+    <form class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Name</label>
+            <input type="text" class="form-control" id="first" placeholder="enter your name" required>
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Phone number</label>
+            <input type="text" class="form-control" id="last-name"  placeholder="enter your number" >
+          </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4"  placeholder="enter your mail"  required>
+        </div>
+       
+        <div class="col-6">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"  required>
+        </div>
+        
+        <div class="col-md-5">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity"required>
+        </div> 
+        <div class="col-md-5">
+          <label for="inputState" class="form-label">State</label>
+          <input type="text" class="form-control" id="inputCity"required>
+
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">pin</label>
+          <input type="text" class="form-control" id="inputZip"required>
+        </div>
+       
+       
+        
+      </form>
+   
+    <h3 align=center class="mt-5" >PAYMENT METHOD</h3> 
+
+    <!-- radio buttons for debit and credit -->
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"onclick="cardPayment()">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Debit/credit/ATM card
+      </label>
+    </div>
+    <!-- Debit and credit card payment form -->
+    <div class="container my-5" id="debit-credit"> 
+      
+      <form>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2  col-form-label">Card type</label>
+            <div class="col-sm-10 col-md-4">
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>Select card</option>
+                  <option value="1">Debit card</option>
+                  <option value="2">Credit card</option>
+                  <option value="3">Visa</option>
+                </select>
+              
+            </div>
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Card Number:</label>
+            <div class="col-sm-10 col-md-4">
+              <input type="text" class="form-control" id="inputPassword3">
+            </div>
+          </div>
+         
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2  col-form-label">Card cvv:</label>
+            <div class="col-sm-4 col-md-4">
+              <input type="password" class="form-control" id="inputPassword3">
+            </div>
+
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Card expiry:</label>
+            <div class="col-sm-4 col-md-4">
+              <input type="date" class="form-control" id="inputPassword3">
+            </div>
+          </div>
+         
+          <div class="row mb-3">
+              <label for="inputPassword3" class="col-sm-3 col-form-label">Enter OTP:</label>
+              <div class="col-sm-4 col-md-2">
+                <input type="text" class="form-control" id="inputPassword3">
+              </div>
+           
+          </div>
+          <button type="submit" class="btn btn-primary"id="cash-price"onclick="paymentSuccessfull()">Pay Now &nbsp;$</button>
+        </form>
+       </div>
+
+
+    <!-- radio button for upi payment -->
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"onclick="UPIPayment()">
+      <label class="form-check-label" for="flexRadioDefault2">
+        UPI
+      </label>
+    </div>
+    <!-- upi payment section -->
+    <div class="upi-payment-form my-2 mx-5" id="upi">
+    <form>
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-lg-1 col-form-label">UPI ID:</label>
+        <div class="col-sm-10 col-md-5">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="67686997@upi">
+        </div>
+      </div>
+      
+    </form>
+    <div class="col-md-6 text-center">
+     
+    <button type="submit" class="btn btn-primary" id="upi-price" onclick="paymentSuccessfull()" >Pay Now &nbsp; $</button>
+  </div>
+  </div>
+  
+
+
+
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick="PODpayment()">
+      <label class="form-check-label" for="flexRadioDefault2">
+        POD(Pay on delivery)
+      </label>
+    </div>
+
+    
+
+    
+   
+    </div>
+
+<script>
+
+let carts = JSON.parse(localStorage.getItem("CART"));
+
+
+
+    
+   
+
+  let cardPay=document.querySelector("#debit-credit");
+  let UPIPay=document.querySelector("#upi");
+  let upiPrice=document.querySelector("#upi-price");
+  let cashPrice=document.querySelector("#cash-price");
+ 
+//  to render total price
+  let totalPrice=0;
+    carts.forEach((item)=>{
+        totalPrice+=item.price*item.numberofunits;
+      
+    });
+    
+  function cardPayment(){
+    cardPay.style.display="block";
+    UPIPay.style.display="none";
+
+  }
+  function UPIPayment(){
+    UPIPay.style.display="block";
+    cardPay.style.display="none";
+
+
+  }
+  cashPrice.innerHTML+= totalPrice.toFixed(2);
+    upiPrice.innerHTML+= totalPrice.toFixed(2);
+
+
+ 
+  function PODpayment(){
+    UPIPay.style.display="none";
+    cardPay.style.display="none";
+    alert("your order has been booked successfully, thank you");
+
+  }
+   function paymentSuccessfull(){
+    alert("your order has been booked successfully, thank you");
+   }
+  
+
+
+</script>
+    
+</body>
+</html>
